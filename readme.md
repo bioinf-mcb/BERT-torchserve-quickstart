@@ -53,3 +53,25 @@ model-store
 └── biobert_batch.mar
 ```
 
+## Running the model
+Command:
+```bash
+docker run --rm -it -p 8080:8080 -v $(pwd)/model-store:/home/model-server/model-store pytorch/torchserve torchserve --start --model-store model-store --models biobert=biobert_batch.mar
+```
+
+### Embedding sentences
+```
+curl --location --request GET 'localhost:8080/predictions/biobert' \
+--form 'data="test"'
+```
+
+### Checking if everything's working:
+```bash
+~ $ curl localhost:8080/ping
+```
+Response:
+```
+{
+  "status": "Healthy"
+}
+```
