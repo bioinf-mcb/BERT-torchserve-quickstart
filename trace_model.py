@@ -5,7 +5,7 @@ import torch
 
 # %%
 MODEL = "./biobert_large"
-bio_tokenizer = BertTokenizer.from_pretrained("models/vocab.txt")
+bio_tokenizer = BertTokenizer.from_pretrained(f"{MODEL}/vocab.txt")
 bio_model = BertModel.from_pretrained(MODEL)
 
 # %%
@@ -24,4 +24,4 @@ traced = torch.jit.trace(bio_model, (tokens_tensor, segments_tensor, mask))
 
 
 # %%
-traced.save("biobert_large/biobert_batch.pt")
+traced.save("models/biobert_batch.pt")
