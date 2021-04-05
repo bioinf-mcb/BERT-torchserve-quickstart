@@ -3,6 +3,8 @@
 ## Overview
 We are going to create a torchserve archive (.mar) in a two-step approach and then use it for setting up a Torchserve instance. Feel free to skip a step if you've already got the required files.
 
+This guide references the `BiobBERT` model, but you can use it with any BERT implementation.
+
 ## Requirements
  - Python >= 3.7 with packages from requirements.txt
     - torch-model-archiver is optional
