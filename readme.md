@@ -1,7 +1,7 @@
 # Bioembeddings torchserve quickstart
 
 ## Overview
-We are going to create a torchserve archive (.mar) in a two-step approach. Feel free to skip a step if you've already got the required files.
+We are going to create a torchserve archive (.mar) in a two-step approach and then use it for setting up a Torchserve instance. Feel free to skip a step if you've already got the required files.
 
 ## Requirements
  - Python >= 3.7 with packages from requirements.txt
